@@ -1,1 +1,11 @@
-
+class Solution:
+    def countStrings(self, n):
+        if n == 1:
+            return 2
+        
+        a, b = 2, 3   # f(1)=2, f(2)=3
+        
+        for _ in range(3, n+1):
+            a, b = b, a + b
+        
+        return b if n > 1 else a
