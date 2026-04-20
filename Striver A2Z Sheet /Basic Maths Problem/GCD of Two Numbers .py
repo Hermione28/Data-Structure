@@ -1,6 +1,4 @@
-Got it 👍 — here it is in **clean plain format (no GitHub styling, easy to copy-paste)**
 
----
 
 1. Brute Force Approach
 
@@ -8,13 +6,13 @@ class Solution:
 def GCD(self, n1, n2):
 gcd = 1
 
-```
+
     for i in range(1, min(n1, n2) + 1):
         if n1 % i == 0 and n2 % i == 0:
             gcd = i
             
     return gcd
-```
+
 
 Simple Explanation:
 
