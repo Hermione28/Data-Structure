@@ -1,1 +1,74 @@
 
+class solution:
+  def merge(self,nums,low,mid,high):
+    temp=[]
+    left = low
+    right = mid+ 1
+
+    while left<= mid and right<= high:
+      if nums[left] <= nums[right]:
+        temp.append(nums[left])
+        left = left +1
+      else:
+        temp.append(nums[right])
+        right = right + 1
+
+   while left <= mid:
+     temp.append(nums[left])
+     left = left + 1
+
+   while right <= high:
+     temp.append(nums[right])
+     right = right + 1
+
+   for i in range(low, higt + 1):
+     nums[i] = temp[i - low] 
+
+def mergesorthelper(self,nums,low,high):
+  if low >= high:
+    return
+
+  mid = (low+high) // 2
+  self.mergesorthelper(nums,low,mid)
+  self.mergesorthelper(nums,mid+1,high)
+  self.mergesort(nums,low,mid,high)
+
+def mergesort(self,nums):
+  self.mergesorthelper(nums,0,len(nums)-1)
+  return nums
+
+'''recursive approch'''
+
+class solution:
+  def merge(self,arr,low ,mid,high):
+    temp =[]
+    left,right = low ,mid+1
+
+    while left <= mid and right <=high:
+      if arr[left] <= arr[right]:
+        temp.append[left]
+        left += 1
+      else:
+        temp.append[right]
+        right += 1
+
+    while left <=mid:
+      temp.append[left]
+      left += 1
+
+   while right <= high:
+     temp.append[right]
+     right += 1
+
+  for i in range(low , high + 1):
+    arr[i] = temp[i - low]
+
+def mergesort(self,arr,low,high):
+  if low >= high:
+    return
+  mid = ( low + high) //2
+  self.mergesort(arr ,low,mid)
+  self.mergesort(arr,mid+1,high)
+  self.merge(arr,low ,mid,high)
+
+
