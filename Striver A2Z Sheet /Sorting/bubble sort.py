@@ -15,7 +15,8 @@ class solution:
         if nums[j] > nums[j+1]:
           nums[j] , nums[j+1] = nums[j+1] , nums[j]
     return nums
-        
+
+
     
 ''' Optimized approach
 The best case occurs if the given array is already sorted. We can reduce the time complexity to O(N) by just adding a small check inside the loops.
